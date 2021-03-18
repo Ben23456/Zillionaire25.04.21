@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" prefHeight="400.0" prefWidth="445.0" vgap="10" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller1">
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints maxHeight="54.666656494140625" minHeight="10.0" prefHeight="16.666656494140625" />
+      <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="35.33334350585939" />
+      <RowConstraints maxHeight="50.0" minHeight="100.0" prefHeight="100.0" />
+      <RowConstraints maxHeight="95.33331298828125" minHeight="30.0" prefHeight="30.0" />
+      <RowConstraints maxHeight="170.0" minHeight="100.0" prefHeight="170.0" />
+      <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" />
+   </rowConstraints>
+   <columnConstraints>
+      <ColumnConstraints maxWidth="238.66668701171875" minWidth="300.0" prefWidth="300.0" />
+      <ColumnConstraints maxWidth="121.33331298828125" minWidth="13.999979654947936" prefWidth="100.0" />
+   </columnConstraints>
+   <children>
+      <HBox prefHeight="35.0" prefWidth="212.0" GridPane.rowIndex="5">
+         <children>
+            <Button mnemonicParsing="false" onAction="#displayGeneralKnowledge" prefHeight="23.0" prefWidth="117.0" text="General Knowledge">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#DisplaySport" text="Sport">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#DisplayGeog" text="Geography">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="227.0" GridPane.rowIndex="6">
+         <children>
+            <Label fx:id="questionlabel" prefHeight="57.0" prefWidth="272.0">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <Label text="Player 1" GridPane.rowIndex="3" />
+      <Label prefHeight="17.0" prefWidth="171.0" text="Who Wants To Be A Zillionaire" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold Italic" size="11.0" />
+         </font>
+      </Label>
+      <Label text="Select a Category:" GridPane.rowIndex="4" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="8">
+         <children>
+            <Label text="Help:">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#display50" text="50/50">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#displayaskpublic" text="Ask The Public">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" text="25/75">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+      <TextField fx:id="helpbox" prefHeight="97.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="9">
+         <children>
+            <Label text="Score">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="ScoreBox" prefHeight="77.0" prefWidth="170.0">
+               <padding>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <children>
+            <TextField fx:id="AnswerBox" />
+         </children>
+      </HBox>
+      <Label fx:id="correctorincorrect" prefHeight="24.0" prefWidth="303.0" GridPane.rowIndex="7" />
+      <Label fx:id="Playernumber" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button fx:id="PlayerAdd" mnemonicParsing="false" onAction="#AddAnotherPlayer" prefHeight="25.0" prefWidth="105.0" text="Add Another Player" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <font>
+            <Font size="8.0" />
+         </font>
+      </Button>
+   </children>
+</GridPane>

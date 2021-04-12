@@ -9,16 +9,17 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="366.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller2">
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller2">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="470.6666666666667" minWidth="10.0" prefWidth="458.33335367838544" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.66668701171875" minWidth="10.0" prefWidth="140.99997965494794" />
   </columnConstraints>
   <rowConstraints>
       <RowConstraints maxHeight="34.66667175292969" minHeight="10.0" prefHeight="17.999998092651367" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="67.33332920074463" minHeight="10.0" prefHeight="34.66666539510091" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="71.66666793823241" minHeight="10.0" prefHeight="25.333335876464844" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="34.66667175292969" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="34.66667175292969" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="84.66666412353516" minHeight="10.0" prefHeight="52.00001017252606" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="69.66665649414062" minHeight="10.0" prefHeight="69.66665649414062" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="69.66665649414062" minHeight="10.0" prefHeight="69.66665649414062" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="71.99999999999997" minHeight="9.333358764648409" prefHeight="32.66670227050781" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="71.66665649414065" minHeight="0.0" prefHeight="65.00000000000003" vgrow="SOMETIMES" />
@@ -30,18 +31,7 @@
             <Label text="Who Wants to Be A Zillionaire " />
          </children>
       </HBox>
-      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
-         <children>
-            <Label text="Player 2" />
-         </children>
-      </HBox>
-      <Label fx:id="PlayersNo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
-         <children>
-            <Label text="Select Category:" />
-         </children>
-      </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+      <HBox prefHeight="118.0" prefWidth="441.0" GridPane.rowIndex="3">
          <children>
             <Button fx:id="GeneralKnowledge" mnemonicParsing="false" onAction="#DisplayGenKnowledgeQ" text="General Knowledge">
                <HBox.margin>
@@ -62,20 +52,16 @@
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
          <children>
-            <Label fx:id="questionbox" prefHeight="72.0" prefWidth="462.0" />
+            <TextField fx:id="displayQuestion" prefHeight="70.0" prefWidth="472.0" promptText="Question Will Appear Here" />
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
-         <children>
-            <TextField fx:id="answerbox" prefHeight="73.0" prefWidth="142.0" />
-         </children>
-      </HBox>
-      <HBox prefHeight="26.0" prefWidth="459.0" GridPane.rowIndex="5">
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <HBox prefHeight="26.0" prefWidth="459.0" GridPane.rowIndex="6">
          <children>
             <Label fx:id="correctorincorrect" prefHeight="49.0" prefWidth="462.0" />
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="6">
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="7">
          <children>
             <Label text="Help:" />
             <Button fx:id="fifty" mnemonicParsing="false" onAction="#Display50" text="50/50">
@@ -104,16 +90,55 @@
             </Button>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
          <children>
             <TextField fx:id="helpbox" prefHeight="107.0" prefWidth="142.0" />
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="7">
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="8">
          <children>
-            <Label text="Score:" />
+            <Label fx:id="scorebox" prefHeight="17.0" prefWidth="238.0" text="Score:" />
          </children>
       </HBox>
-      <Label fx:id="ScoreBox" prefHeight="48.0" prefWidth="145.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <Button mnemonicParsing="false" onAction="#Scorebutton" text="Score" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+      <Label text="Player 2" GridPane.rowIndex="1" />
+      <Label text="Choose A Category" GridPane.rowIndex="2" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="5">
+         <children>
+            <Button mnemonicParsing="false" onAction="#Choice1" text="Choice 1">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#Choice2" text="Choice 2">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#Choice3" text="Choice 3">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#Choice4" text="Choice 4">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+      <Button fx:id="submitanswer" mnemonicParsing="false" onAction="#Submit" text="Submit" GridPane.columnIndex="1" GridPane.rowIndex="5" />
    </children>
 </GridPane>

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" prefHeight="400.0" prefWidth="445.0" vgap="10" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller1">
+<GridPane alignment="center" hgap="10" prefHeight="552.0" prefWidth="611.0" vgap="10" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller1">
    <rowConstraints>
       <RowConstraints />
       <RowConstraints />
@@ -18,14 +18,16 @@
       <RowConstraints />
       <RowConstraints maxHeight="54.666656494140625" minHeight="10.0" prefHeight="16.666656494140625" />
       <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="35.33334350585939" />
-      <RowConstraints maxHeight="50.0" minHeight="100.0" prefHeight="100.0" />
+      <RowConstraints maxHeight="128.66665649414062" minHeight="61.333343505859375" prefHeight="117.33334350585938" />
+      <RowConstraints maxHeight="138.66665649414062" minHeight="32.00001017252606" prefHeight="43.33332316080731" />
       <RowConstraints maxHeight="95.33331298828125" minHeight="30.0" prefHeight="30.0" />
       <RowConstraints maxHeight="170.0" minHeight="100.0" prefHeight="170.0" />
       <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" />
+      <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" />
    </rowConstraints>
    <columnConstraints>
-      <ColumnConstraints maxWidth="238.66668701171875" minWidth="300.0" prefWidth="300.0" />
-      <ColumnConstraints maxWidth="121.33331298828125" minWidth="13.999979654947936" prefWidth="100.0" />
+      <ColumnConstraints maxWidth="395.33331298828125" minWidth="400.0" prefWidth="332.66668701171875" />
+      <ColumnConstraints maxWidth="148.66664632161462" minWidth="13.999979654947936" prefWidth="148.66664632161462" />
    </columnConstraints>
    <children>
       <HBox prefHeight="35.0" prefWidth="212.0" GridPane.rowIndex="5">
@@ -50,16 +52,13 @@
             </Button>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="227.0" GridPane.rowIndex="6">
+      <HBox prefHeight="100.0" prefWidth="223.0" GridPane.rowIndex="6">
          <children>
-            <Label fx:id="questionlabel" prefHeight="57.0" prefWidth="272.0">
-               <HBox.margin>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </HBox.margin>
-               <padding>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </padding>
-            </Label>
+            <TextField fx:id="displayQuestion" nodeOrientation="LEFT_TO_RIGHT" prefHeight="106.0" prefWidth="399.0" promptText="Question Will Appear Here">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
          </children>
       </HBox>
       <Label text="Player 1" GridPane.rowIndex="3" />
@@ -69,7 +68,7 @@
          </font>
       </Label>
       <Label text="Select a Category:" GridPane.rowIndex="4" />
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="8">
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="9">
          <children>
             <Label text="Help:">
                <HBox.margin>
@@ -79,7 +78,7 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
             </Label>
-            <Button mnemonicParsing="false" onAction="#display50" text="50/50">
+            <Button fx:id="fiftyhelp" mnemonicParsing="false" onAction="#display50" text="50/50">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
@@ -87,7 +86,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" onAction="#displayaskpublic" text="Ask The Public">
+            <Button fx:id="askhelp" mnemonicParsing="false" onAction="#displayaskpublic" text="Ask The Public">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
@@ -95,7 +94,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" text="25/75">
+            <Button fx:id="twentyfivehelp" mnemonicParsing="false" onAction="#display25" text="25/75">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
@@ -105,8 +104,8 @@
             </Button>
          </children>
       </HBox>
-      <TextField fx:id="helpbox" prefHeight="97.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="9">
+      <TextField fx:id="helpbox" prefHeight="88.0" prefWidth="149.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="10">
          <children>
             <Label text="Score">
                <HBox.margin>
@@ -126,17 +125,51 @@
             </Label>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
-         <children>
-            <TextField fx:id="AnswerBox" />
-         </children>
-      </HBox>
-      <Label fx:id="correctorincorrect" prefHeight="24.0" prefWidth="303.0" GridPane.rowIndex="7" />
+      <Label fx:id="correctorincorrect" prefHeight="24.0" prefWidth="303.0" GridPane.rowIndex="8" />
       <Label fx:id="Playernumber" GridPane.columnIndex="1" GridPane.rowIndex="3" />
       <Button fx:id="PlayerAdd" mnemonicParsing="false" onAction="#AddAnotherPlayer" prefHeight="25.0" prefWidth="105.0" text="Add Another Player" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <font>
             <Font size="8.0" />
          </font>
       </Button>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="7">
+         <children>
+            <Button fx:id="one" mnemonicParsing="false" onAction="#Choice1" text="Choice 1">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="two" mnemonicParsing="false" onAction="#Choice2" text="Choice2">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button fx:id="three" mnemonicParsing="false" onAction="#Choice3" text="Choice 3">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button fx:id="four" mnemonicParsing="false" onAction="#Choice4" text="Choice 4">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+      <Button fx:id="submitans" mnemonicParsing="false" onAction="#Submit" text="Submit" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <Label fx:id="getscore" prefHeight="17.0" prefWidth="278.0" GridPane.rowIndex="11" />
+      <Button fx:id="scoreshow" mnemonicParsing="false" onAction="#displayscore" text="Score" GridPane.columnIndex="1" GridPane.rowIndex="11" />
    </children>
 </GridPane>
